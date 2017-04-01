@@ -95,4 +95,24 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
-    p
+    public void goToNewActivity4(View v) {
+        Intent intent = new Intent(this, ur.class);
+        startActivity(intent);
+    }
+
+    public void goToNewActivity5(View v) {
+        Intent intent = new Intent(this, vopros.class);
+        startActivity(intent);
+    }
+
+    public void goToNewActivity6(View v) {
+        Intent intent = new Intent(this, zag.class);
+        startActivity(intent);
+    }
+
+    public void goToNewActivity7(View v) {
+        Intent intent = new Intent(this, gar.class);
+        startActivity(intent);
+    }
+
+}
