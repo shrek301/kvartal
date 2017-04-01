@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools" package="com.androidbegin.yqltutorial" >
+    <uses-sdk
+            android:minSdkVersion="8"
+    />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <uses-permission  android:name = "android.permission.ACCESS_WIFI_STATE"  />
+    <uses-permission  android:name = "android.permission.ACCESS_NETWORK_STATE"  />
+
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme" >
+        <activity
+                android:name="app.MainActivity"
+                android:theme="@android:style/Theme.Holo.Light"
+                android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="app.bisnes"
+                  android:theme="@android:style/Theme.Holo.Light" />
+        <activity android:name="app.gar"
+                  android:theme="@android:style/Theme.Holo.Light"/>
+        <activity android:name="app.gil"
+                  android:theme="@android:style/Theme.Holo.Light" />
+        <activity android:name="app.invest"
+                  android:theme="@android:style/Theme.Holo.Light"/>
+        <activity android:name="app.kom"
+                  android:theme="@android:style/Theme.Holo.Light"
+        />
+        <activity android:name="app.ur"
+                  android:theme="@android:style/Theme.Holo.Light" />
+        <activity android:name="app.vopros"
+                  android:theme="@android:style/Theme.Holo.Light" />
+        <activity android:name="app.zag"
+                  android:theme="@android:style/Theme.Holo.Light" />
+        <activity android:name="app.utils.SingleItemView"
+                  android:theme="@android:style/Theme.Holo.Light" />
+    </application>
+
+</manifest>

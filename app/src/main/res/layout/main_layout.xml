@@ -1,0 +1,218 @@
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:layout_weight="0.5">
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+                <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/zil"
+                        android:drawableLeft="@drawable/zil"
+                        android:background="@drawable/button_background"
+                        android:onClick="goToNewActivity1"/>
+                <TextView
+                        android:text="ЖИЛАЯ НЕДВИЖИМОСТЬ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ziltext"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+                <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/kom"
+                        android:drawableLeft="@drawable/kom"
+                        android:background="@drawable/button_a"
+                        android:onClick="goToNewActivity3" />
+                <TextView
+                        android:text="КОММЕРЧЕСКАЯ НЕДВИЖИМОСТЬ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/komtext"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"/>
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:layout_weight="0.5">
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+                <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/inv"
+
+                        android:drawableLeft="@drawable/inv"
+                        android:background="@drawable/buttom_c"
+                        android:onClick="goToNewActivity2" />
+                <TextView
+                        android:text="ИНВЕСТИЦИОННЫЕ ПРОЕКТЫ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/invtext"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+                <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/gar"
+                        android:drawableLeft="@drawable/gar"
+                        android:background="@drawable/buttom_f"
+                        android:onClick="goToNewActivity7" />
+                <TextView
+                        android:text="ГАРАЖИ ПАРКИНГИ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/gartext"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"/>
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:layout_weight="0.5">
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+
+                <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/ur"
+                        android:drawableLeft="@drawable/pred"
+                        android:background="@drawable/buttom_h"
+                        android:onClick="goToNewActivity4"/>
+                <TextView
+                        android:text="ПОИСК ПРЕДЛОЖЕНИЙ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/urtext"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+                <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/zakaz"
+                        android:drawableLeft="@drawable/zakaz"
+                        android:background="@drawable/buttom_j"
+                        android:onClick="goToNewActivity5" />
+                <TextView
+                        android:text="РАЗМЕСТИТЬ СВОЕ ОБЪЯВЛЕНИЕ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/zakaztext"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"/>
+            </RelativeLayout>
+        </TableRow>
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:layout_weight="0.5">
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+                <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/zag"
+                        android:drawableLeft="@drawable/zag"
+                        android:background="@drawable/buttom_w"
+                        android:onClick="goToNewActivity6" />
+                <TextView
+                        android:text="ЗАГОРОДНАЯ НЕДВИЖИМОСТЬ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/zagtext"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+                <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/bis"
+                        android:drawableLeft="@drawable/bis"
+                        android:background="@drawable/buttom_b"
+                        android:onClick="goToNewActivity" />
+                <TextView
+                        android:text="ПРОДАЖА ГОТОВО БИЗНЕСА"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bistext"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"/>
+            </RelativeLayout>
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
