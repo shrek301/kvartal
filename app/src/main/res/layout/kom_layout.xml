@@ -1,23 +1,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingBottom="@+id/activity_vertical_margin"
                 android:paddingLeft="@+id/activity_horizontal_margin"
                 android:paddingRight="@+id/activity_horizontal_margin"
                 android:paddingTop="@+id/activity_vertical_margin"
-                tools:context=".ItemActivity" >
+>
 
     <LinearLayout
             android:id="@+id/linearLayout1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:dividerPadding="@+id/searchResultListPadding"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
         <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
             <ImageView
                     android:id="@+id/imageView1"
@@ -25,7 +24,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="@+id/searchResultListPadding"
                     android:paddingTop="@+id/searchResultListPadding"
-                    android:src="@+id/term" />
+                    android:src="@+id/term"/>
 
             <TextView
                     android:id="@+id/welcomeText"
@@ -35,7 +34,7 @@
                     android:gravity="left"
                     android:paddingLeft="@+id/searchResultListPadding"
                     android:text="Name"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                    android:textAppearance="?android:attr/textAppearanceLarge"/>
         </LinearLayout>
 
         <TextView
@@ -44,20 +43,20 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:maxLines="@+id/descriptionSize"
-                android:text="Description" />
+                android:text="Description"/>
 
         <TableLayout
                 android:id="@+id/table"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_marginTop="28dp" >
+                android:layout_marginTop="28dp">
 
         </TableLayout>
 
         <ExpandableListView
                 android:id="@+id/expandableListView1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
         </ExpandableListView>
 
     </LinearLayout>

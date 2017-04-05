@@ -10,7 +10,7 @@
 
         <ImageView
                 android:id="@+id/imageView1"
-                android:layout_width="0dp"
+                android:layout_width="100dp"
                 android:layout_height="190dp"
                 android:src="@drawable/asset" />
 

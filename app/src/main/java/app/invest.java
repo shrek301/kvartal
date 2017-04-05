@@ -18,6 +18,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class invest extends Activity {
+    public static String RANK = "title";
+    public static String COUNTRY = "city_title";
+    public static String POPULATION = "type";
+    public static String FLAG = "picture_path";
+    public static String POL = "description";
+    public static String NAME = "user_title";
     // Declare Variables
     JSONObject jsonobject;
     JSONArray jsonarray;
@@ -25,12 +31,6 @@ public class invest extends Activity {
     ListViewAdapter adapter;
     ProgressDialog mProgressDialog;
     ArrayList<HashMap<String, String>> arraylist;
-    public static String RANK = "title";
-    public static String COUNTRY = "city_title";
-    public static String POPULATION = "type";
-    public static String FLAG = "picture_path";
-    public static String POL = "description";
-    public static String NAME = "user_title";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

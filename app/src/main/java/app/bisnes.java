@@ -7,9 +7,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
-import com.androidbegin.yqltutorial.R;
 import app.utils.JSONfunctions;
 import app.utils.ListViewAdapter;
+import com.androidbegin.yqltutorial.R;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -18,6 +18,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class bisnes extends Activity {
+    public static String RANK = "title";
+    public static String COUNTRY = "city_title";
+    public static String POPULATION = "type";
+    public static String FLAG = "picture_path";
     // Declare Variables
     JSONObject jsonobject;
     JSONArray jsonarray;
@@ -25,10 +29,6 @@ public class bisnes extends Activity {
     ListViewAdapter adapter;
     ProgressDialog mProgressDialog;
     ArrayList<HashMap<String, String>> arraylist;
-    public static String RANK = "title";
-    public static String COUNTRY = "city_title";
-    public static String POPULATION = "type";
-    public static String FLAG = "picture_path";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

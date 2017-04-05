@@ -1,6 +1,6 @@
 package app.utils;
 
-        import android.content.Context;
+import android.content.Context;
 import android.content.Intent;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -62,7 +62,7 @@ public class ListViewAdapter extends BaseAdapter {
         resultp = data.get(position);
 
         // Locate the TextViews in listview_item.xml
-      //  rank = (TextView) itemView.findViewById(R.id.rank);
+        rank = (TextView) itemView.findViewById(R.id.pol);
         country = (TextView) itemView.findViewById(R.id.country);
         population = (TextView) itemView.findViewById(R.id.population);
 
@@ -71,7 +71,7 @@ public class ListViewAdapter extends BaseAdapter {
 
         // Capture position and set results to the TextViews
 
-      //  rank.setText(Html.fromHtml(resultp.get(kom.RANK)));
+        rank.setText(Html.fromHtml((resultp.get(kom.RANK))));
         country.setText(Html.fromHtml(resultp.get(kom.COUNTRY)));
         population.setText(Html.fromHtml(resultp.get(kom.POPULATION)));
         // Capture position and set results to the ImageView
@@ -90,7 +90,7 @@ public class ListViewAdapter extends BaseAdapter {
                 // Pass all data country
                 intent.putExtra("country", resultp.get(kom.COUNTRY));
                 // Pass all data population
-                intent.putExtra("population",resultp.get(kom.POPULATION));
+                intent.putExtra("population", resultp.get(kom.POPULATION));
                 // Pass all data flag
                 intent.putExtra("flag", resultp.get(kom.FLAG));
                 intent.putExtra("pol", resultp.get(kom.POL));

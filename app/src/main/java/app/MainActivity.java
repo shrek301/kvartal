@@ -19,14 +19,14 @@ import java.net.URL;
  */
 public class MainActivity extends Activity {
 
-//запускаем поток проверки наличия конекта к сети
+    //запускаем поток проверки наличия конекта к сети
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
         new Thread(new Runnable() {
             @Override
-            public void run(){
+            public void run() {
                 if (checkInternet()) {
 
                 } else {
@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
     // главный метод для проверки подключения
     public boolean checkInternet() {
 
-        ConnectivityManager cm = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         // проверка подключения
@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
             try {
                 // тест доступности внешнего ресурса
                 URL url = new URL("http://www.google.com/");
-                HttpURLConnection urlc = (HttpURLConnection)url.openConnection();
+                HttpURLConnection urlc = (HttpURLConnection) url.openConnection();
                 urlc.setRequestProperty("User-Agent", "test");
                 urlc.setRequestProperty("Connection", "close");
                 urlc.setConnectTimeout(1000); // Timeout в секундах
@@ -72,10 +72,11 @@ public class MainActivity extends Activity {
 
         String number = "23454568678";
         Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:" +number));
+        intent.setData(Uri.parse("tel:" + number));
         startActivity(intent);
     }
-        public void goToNewActivity(View v) {
+
+    public void goToNewActivity(View v) {
         Intent intent = new Intent(this, bisnes.class);
         startActivity(intent);
     }

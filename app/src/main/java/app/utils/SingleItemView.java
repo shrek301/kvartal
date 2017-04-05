@@ -1,7 +1,7 @@
 
 package app.utils;
 
-        import android.app.Activity;
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.text.Html;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.androidbegin.yqltutorial.R;
 import app.vopros;
+import com.androidbegin.yqltutorial.R;
 
 public class SingleItemView extends Activity {
     // Declare Variables

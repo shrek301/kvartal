@@ -11,7 +11,7 @@ import android.os.Handler;
 import android.widget.ImageView;
 import com.androidbegin.yqltutorial.R;
 
-
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Collections;
@@ -20,30 +20,21 @@ import java.util.WeakHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-
 public class ImageLoader {
 
+    final int stub_id = R.drawable.temp_image;
     MemoryCache memoryCache = new MemoryCache();
     FileCache fileCache;
-    private Map<ImageView, String> imageViews = Collections
-            .synchronizedMap(new WeakHashMap<ImageView, String>());
     ExecutorService executorService;
     // Handler to display images in UI thread
     Handler handler = new Handler();
+    private Map<ImageView, String> imageViews = Collections
+            .synchronizedMap(new WeakHashMap<ImageView, String>());
 
     public ImageLoader(Context context) {
         fileCache = new FileCache(context);
         executorService = Executors.newFixedThreadPool(5);
     }
-
-    final int stub_id = R.drawable.temp_image;
 
     public void DisplayImage(String url, ImageView imageView) {
         imageViews.put(imageView, url);
@@ -130,6 +121,16 @@ public class ImageLoader {
         return null;
     }
 
+    boolean imageViewReused(PhotoToLoad photoToLoad) {
+        String tag = imageViews.get(photoToLoad.imageView);
+        return tag == null || !tag.equals(photoToLoad.url);
+    }
+
+    public void clearCache() {
+        memoryCache.clear();
+        fileCache.clear();
+    }
+
     // Task for the queue
     private class PhotoToLoad {
         public String url;
@@ -165,13 +166,6 @@ public class ImageLoader {
         }
     }
 
-    boolean imageViewReused(PhotoToLoad photoToLoad) {
-        String tag = imageViews.get(photoToLoad.imageView);
-        if (tag == null || !tag.equals(photoToLoad.url))
-            return true;
-        return false;
-    }
-
     // Used to display bitmap in the UI thread
     class BitmapDisplayer implements Runnable {
         Bitmap bitmap;
@@ -190,11 +184,6 @@ public class ImageLoader {
             else
                 photoToLoad.imageView.setImageResource(stub_id);
         }
-    }
-
-    public void clearCache() {
-        memoryCache.clear();
-        fileCache.clear();
     }
 
 }
