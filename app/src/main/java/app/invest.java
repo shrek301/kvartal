@@ -5,8 +5,8 @@ import android.app.ProgressDialog;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.util.Log;
-import android.widget.ListView;
 import app.utils.JSONfunctions;
 import app.utils.ListViewAdapter;
 import com.androidbegin.yqltutorial.R;
@@ -27,7 +27,7 @@ public class invest extends Activity {
     // Declare Variables
     JSONObject jsonobject;
     JSONArray jsonarray;
-    ListView listview;
+    CardView listview;
     ListViewAdapter adapter;
     ProgressDialog mProgressDialog;
     ArrayList<HashMap<String, String>> arraylist;
@@ -90,7 +90,7 @@ public class invest extends Activity {
         @Override
         protected void onPostExecute(Void args) {
             // Locate the listview in listview_main.xml
-            listview = (ListView) findViewById(R.id.listview);
+            listview = (CardView) findViewById(R.id.listview);
             // Pass the results into ListViewAdapter.java
             adapter = new ListViewAdapter(invest.this, arraylist);
             // Set the adapter to the ListView

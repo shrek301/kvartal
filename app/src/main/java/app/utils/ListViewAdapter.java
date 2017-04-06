@@ -62,7 +62,7 @@ public class ListViewAdapter extends BaseAdapter {
         resultp = data.get(position);
 
         // Locate the TextViews in listview_item.xml
-        rank = (TextView) itemView.findViewById(R.id.pol);
+        rank = (TextView) itemView.findViewById(R.id.rank);
         country = (TextView) itemView.findViewById(R.id.country);
         population = (TextView) itemView.findViewById(R.id.population);
 
@@ -71,7 +71,7 @@ public class ListViewAdapter extends BaseAdapter {
 
         // Capture position and set results to the TextViews
 
-        rank.setText(Html.fromHtml((resultp.get(kom.RANK))));
+        rank.setText(Html.fromHtml(resultp.get(kom.RANK)));
         country.setText(Html.fromHtml(resultp.get(kom.COUNTRY)));
         population.setText(Html.fromHtml(resultp.get(kom.POPULATION)));
         // Capture position and set results to the ImageView
