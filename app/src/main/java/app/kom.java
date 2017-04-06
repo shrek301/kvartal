@@ -5,10 +5,10 @@ import android.app.ProgressDialog;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.widget.ListView;
 import app.utils.JSONfunctions;
-import app.utils.ListViewAdapter;
+import app.utils.RecyclerAdapter;
 import com.androidbegin.yqltutorial.R;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,8 +28,8 @@ public class kom extends Activity {
     boolean status;
     JSONObject jsonobject;
     JSONArray jsonarray;
-    ListView listview;
-    ListViewAdapter adapter;
+    RecyclerView listview;
+    RecyclerAdapter adapter;
     ProgressDialog mProgressDialog;
     ArrayList<HashMap<String, String>> arraylist;
 
@@ -95,10 +95,11 @@ public class kom extends Activity {
         @Override
         protected void onPostExecute(Void args) {
             // Locate the listview in listview_main.xml
-            listview = (ListView) findViewById(R.id.listview);
+            listview = (RecyclerView) findViewById(R.id.listview);
             // Pass the results into ListViewAdapter.java
-            adapter = new ListViewAdapter(kom.this, arraylist);
+            adapter = new RecyclerAdapter(kom.this, arraylist);
             // Set the adapter to the ListView
+
             listview.setAdapter(adapter);
             // Close the progressdialog
             mProgressDialog.dismiss();

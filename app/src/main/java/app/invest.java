@@ -5,10 +5,10 @@ import android.app.ProgressDialog;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import app.utils.JSONfunctions;
-import app.utils.ListViewAdapter;
+import app.utils.RecyclerAdapter;
 import com.androidbegin.yqltutorial.R;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,8 +27,8 @@ public class invest extends Activity {
     // Declare Variables
     JSONObject jsonobject;
     JSONArray jsonarray;
-    CardView listview;
-    ListViewAdapter adapter;
+    RecyclerView listview;
+    RecyclerAdapter adapter;
     ProgressDialog mProgressDialog;
     ArrayList<HashMap<String, String>> arraylist;
 
@@ -90,10 +90,11 @@ public class invest extends Activity {
         @Override
         protected void onPostExecute(Void args) {
             // Locate the listview in listview_main.xml
-            listview = (CardView) findViewById(R.id.listview);
+            listview = (RecyclerView) findViewById(R.id.listview);
             // Pass the results into ListViewAdapter.java
-            adapter = new ListViewAdapter(invest.this, arraylist);
+            adapter = new RecyclerAdapter(invest.this, arraylist);
             // Set the adapter to the ListView
+
             listview.setAdapter(adapter);
             // Close the progressdialog
             mProgressDialog.dismiss();
